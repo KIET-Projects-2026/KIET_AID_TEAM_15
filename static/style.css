@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Animated background */
+.bg-animation {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 20%, rgba(56,176,0,0.2), transparent 40%),
+              radial-gradient(circle at 80% 30%, rgba(0,200,255,0.2), transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(255,183,3,0.2), transparent 40%);
+  animation: moveBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-200px, -200px); }
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 80px auto;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  background: rgba(255,255,255,0.12);
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 160px;
+  margin-bottom: 20px;
+}
+
+#answer {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+textarea {
+  flex: 1;
+  height: 80px;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+button {
+  width: 120px;
+  background: #38b000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background: #2d8f00;
+}
